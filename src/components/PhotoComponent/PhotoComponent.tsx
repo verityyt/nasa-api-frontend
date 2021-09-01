@@ -1,7 +1,7 @@
 import React from "react"
 
 import styles from "./PhotoComponent.module.scss"
-import Camera from "../../camera.js";
+import Camera from "../../types/camera.js";
 
 type Props = {
     url: string
