@@ -24,7 +24,7 @@
 }
 
 .value {
-  color: rgb(255,255,255,0.75);
+  color: rgb(255, 255, 255, 0.75);
 }
 
 @media screen and (max-width: 915px) {
@@ -34,9 +34,25 @@
   }
 }
 
-@media screen and (max-height: 1200px) {
+@media screen and (max-width: 500px) {
   .image {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .data {
+    font-size: 0.7rem;
+    width: 300px;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .image {
+    width: 350px;
+    height: 350px;
+  }
+
+  .data {
+    width: 350px;
   }
 }

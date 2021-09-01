@@ -80,6 +80,10 @@
     display: flex;
     justify-content: center;
   }
+
+  .button-row-1 {
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -88,8 +92,20 @@
   }
 }
 
-@media screen and (max-height: 1200px) {
-  .container {
-    height: 80vh;
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .title {
+    font-size: 1.5rem;
   }
 }

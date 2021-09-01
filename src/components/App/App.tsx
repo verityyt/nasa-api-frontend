@@ -6,6 +6,7 @@ import LoadingCircleComponent from "../LoadingCircle/LoadingCircle";
 import Photo from "../../types/photo.js";
 import Camera from "../../types/camera.js";
 import CameraButton from "../CameraButton/CameraButton";
+import classNames from "classnames";
 
 const AppComponent = () => {
     const [executed, setExecuted] = useState(false)
@@ -36,7 +37,7 @@ const AppComponent = () => {
                 <p className={styles.subtitle}>DESIGNED AND DEVELOPED BY <strong>VERITY</strong></p>
             </div>
             <div className={styles.buttons}>
-                <div className={styles["button-row"]}>
+                <div className={classNames(styles["button-row"], styles["button-row-1"])}>
                     <CameraButton onClick={() => setCameraView("FHAZ")} cameraView={cameraView}
                                   cameraAbbreviation={"FHAZ"}/>
                     <CameraButton onClick={() => setCameraView("RHAZ")} cameraView={cameraView}
