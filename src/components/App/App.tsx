@@ -1,7 +1,7 @@
 import React from "react"
 
 import styles from "./App.module.scss"
-import PhotoComponent from "../PhotoComponent/PhotoComponent.js";
+import PhotoComponent from "../PhotoComponent/PhotoComponent";
 
 const test = "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/03223/opgs/edr/fcam/FLB_683622269EDR_F0910390FHAZ00341M_.JPG"
 
