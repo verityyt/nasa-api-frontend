@@ -36,16 +36,28 @@ const AppComponent = () => {
                 <p className={styles.subtitle}>DESIGNED AND DEVELOPED BY <strong>VERITY</strong></p>
             </div>
             <div className={styles.buttons}>
-                <CameraButton onClick={() => setCameraView("FHAZ")} cameraView={cameraView} cameraAbbreviation={"FHAZ"}/>
-                <CameraButton onClick={() => setCameraView("RHAZ")} cameraView={cameraView} cameraAbbreviation={"RHAZ"}/>
-                <CameraButton onClick={() => setCameraView("MAST")} cameraView={cameraView} cameraAbbreviation={"MAST"}/>
-                <CameraButton onClick={() => setCameraView("MAHLI")} cameraView={cameraView} cameraAbbreviation={"MAHLI"}/>
-                <CameraButton onClick={() => setCameraView("MARDI")} cameraView={cameraView} cameraAbbreviation={"MARDI"}/>
-                <CameraButton onClick={() => setCameraView("CHEMCAM")} cameraView={cameraView} cameraAbbreviation={"CHEMCAM"}/>
-                <CameraButton onClick={() => setCameraView("NAVCAM")} cameraView={cameraView} cameraAbbreviation={"NAVCAM"}/>
+                <div className={styles["button-row"]}>
+                    <CameraButton onClick={() => setCameraView("FHAZ")} cameraView={cameraView}
+                                  cameraAbbreviation={"FHAZ"}/>
+                    <CameraButton onClick={() => setCameraView("RHAZ")} cameraView={cameraView}
+                                  cameraAbbreviation={"RHAZ"}/>
+                    <CameraButton onClick={() => setCameraView("MAST")} cameraView={cameraView}
+                                  cameraAbbreviation={"MAST"}/>
+                </div>
+                <div className={styles["button-row"]}>
+                    <CameraButton onClick={() => setCameraView("MAHLI")} cameraView={cameraView}
+                                  cameraAbbreviation={"MAHLI"}/>
+                    <CameraButton onClick={() => setCameraView("MARDI")} cameraView={cameraView}
+                                  cameraAbbreviation={"MARDI"}/>
+                    <CameraButton onClick={() => setCameraView("CHEMCAM")} cameraView={cameraView}
+                                  cameraAbbreviation={"CHEMCAM"}/>
+                    <CameraButton onClick={() => setCameraView("NAVCAM")} cameraView={cameraView}
+                                  cameraAbbreviation={"NAVCAM"}/>
+                </div>
             </div>
-            {(data === undefined) ? <LoadingCircleComponent /> :
-                <PhotoComponent url={data[cameraView].img_src} cameraAbbreviation={data[cameraView].camera.name as Camera.CameraAbbreviation}
+            {(data === undefined) ? <LoadingCircleComponent/> :
+                <PhotoComponent url={data[cameraView].img_src}
+                                cameraAbbreviation={data[cameraView].camera.name as Camera.CameraAbbreviation}
                                 cameraFullName={data[cameraView].camera.full_name as Camera.CameraFullName}
                                 date={data[cameraView].earth_date}/>
             }
