@@ -9,6 +9,7 @@ type Props = {
     cameraFullName: Camera.CameraFullName
     date: string
 }
+
 const PhotoComponent: React.FC<Props> = ({ url, cameraAbbreviation, cameraFullName, date }) => {
 
     function formatDate(date: string): string {
