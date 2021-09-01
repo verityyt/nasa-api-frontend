@@ -13,9 +13,17 @@ const AppComponent = () => {
 
     useEffect(() => {
         if (!executed) {
-            console.log("Fetching...")
-            setData(sampleData)
+            async function fetchBackend() {
+                console.log("Fetching...")
 
+                const response = await fetch("https://nasa-backend.verity-network.de/rover/photos")
+                const json = await response.json() as Photo.PhotoList
+                setData(json)
+
+                console.log(json)
+            }
+
+            fetchBackend()
             setExecuted(true)
         }
     })
