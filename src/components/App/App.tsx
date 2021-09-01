@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 
 import styles from "./App.module.scss"
 import PhotoComponent from "../PhotoComponent/PhotoComponent";
+import LoadingCircleComponent from "../LoadingCircle/LoadingCircle";
 import Photo from "../../types/photo.js";
 import Camera from "../../types/camera.js";
 import CameraButton from "../CameraButton/CameraButton";
@@ -43,7 +44,7 @@ const AppComponent = () => {
                 <CameraButton onClick={() => setCameraView("CHEMCAM")} cameraView={cameraView} cameraAbbreviation={"CHEMCAM"}/>
                 <CameraButton onClick={() => setCameraView("NAVCAM")} cameraView={cameraView} cameraAbbreviation={"NAVCAM"}/>
             </div>
-            {(data === undefined) ? <div className={styles.loadingContainer}><div className={styles.loadingCircle} /><p className={styles.loadingText}>Loading...</p></div> :
+            {(data === undefined) ? <LoadingCircleComponent /> :
                 <PhotoComponent url={data[cameraView].img_src} cameraAbbreviation={data[cameraView].camera.name as Camera.CameraAbbreviation}
                                 cameraFullName={data[cameraView].camera.full_name as Camera.CameraFullName}
                                 date={data[cameraView].earth_date}/>
