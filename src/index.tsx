@@ -8,7 +8,7 @@ const test = "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/s
 
 ReactDOM.render(
     <React.StrictMode>
-        <PhotoComponent url={test} camera={"FHAZ"} date={"2021-08-30"}/>
+        <PhotoComponent url={test} cameraAbbreviation={"FHAZ"} cameraFullName={"Front Hazard Avoidance Camera"} date={"2021-08-30"}/>
     </React.StrictMode>,
     document.getElementById('root')
 );

@@ -1,14 +1,23 @@
 .container {
-  width: 1300px;
-  height: 730px;
-
+  width: max-content;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .image {
-  max-width: 1300px;
-  max-height: 730px;
+  max-width: 1170px;
+  max-height: 670px;
   border-radius: 10px;
+}
+
+.data {
+  position: absolute;
+  padding: 10px;
+  color: white;
+  background: rgb(1, 1, 1, 0.5);
+  border-radius: 10px;
+}
+
+.value {
+  color: rgb(255,255,255,0.75);
 }
