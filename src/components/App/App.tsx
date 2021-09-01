@@ -43,7 +43,7 @@ const AppComponent = () => {
                 <CameraButton onClick={() => setCameraView("CHEMCAM")} cameraView={cameraView} cameraAbbreviation={"CHEMCAM"}/>
                 <CameraButton onClick={() => setCameraView("NAVCAM")} cameraView={cameraView} cameraAbbreviation={"NAVCAM"}/>
             </div>
-            {(data === undefined) ? <p>NO DATA AVAILABLE</p> :
+            {(data === undefined) ? <div className={styles.loadingContainer}><div className={styles.loadingCircle} /><p className={styles.loadingText}>Loading...</p></div> :
                 <PhotoComponent url={data[cameraView].img_src} cameraAbbreviation={data[cameraView].camera.name as Camera.CameraAbbreviation}
                                 cameraFullName={data[cameraView].camera.full_name as Camera.CameraFullName}
                                 date={data[cameraView].earth_date}/>
