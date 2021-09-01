@@ -1,5 +1,5 @@
 namespace Camera {
-    export type CameraAbbreviation = "FHAZ" | "RHAZ" | "MAST" | "CHEMCAM" | "MAHLI" | "MARDI" | "NAVCAM" | "PANCAM"
+    export type CameraAbbreviation = "FHAZ" | "RHAZ" | "MAST" | "CHEMCAM" | "MAHLI" | "MARDI" | "NAVCAM"
 
     export type CameraFullName =
         "Front Hazard Avoidance Camera"
@@ -9,7 +9,6 @@ namespace Camera {
         | "Mars Hand Lens Imager"
         | "Mars Descent Imager"
         | "Navigation Camera"
-        | "PANCAM"
 }
 
 export default Camera
