@@ -21,6 +21,10 @@ const AppComponent = () => {
 
     return (
         <div className={styles.container}>
+            <div className={styles.header}>
+                <p className={styles.title}>EASY NASA API ACCESS</p>
+                <p className={styles.subtitle}>DESIGNED AND DEVELOPED BY <strong>VERITY</strong></p>
+            </div>
             {(data === undefined) ? <p>NO DATA AVAILABLE</p> :
                 <PhotoComponent url={data[cameraView].img_src} cameraAbbreviation={data[cameraView].camera.name as Camera.CameraAbbreviation}
                                 cameraFullName={data[cameraView].camera.full_name as Camera.CameraFullName}
